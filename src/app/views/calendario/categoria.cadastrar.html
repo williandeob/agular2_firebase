@@ -1,1 +1,25 @@
-Categoria cadastrar
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Cadastro de categoria</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-11">
+          <label>Nome*</label>
+          <input class="form-control">
+        </div>
+        <div class="col-md-1">
+          <label>Cor*</label>
+          <input class="form-control" type="color">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12" style="text-align: right;">
+            <button type="button" class="btn btn-primary" (click) = "save();"> Salvar</button>
+            <button type="button" class="btn btn-warning" (click) = "backList();"> Voltar</button>
+        </div>
+    </div>
+</div>

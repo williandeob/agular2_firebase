@@ -1,1 +1,35 @@
-Categoria listar
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Todas as categorias</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <input class="form-control" placeholder="Buscar">
+      </div>
+    </div>
+    <hr>
+
+    <div class="row" *ngIf = 'categories.length == 0'>
+      <div class="col-md-12">
+          <label>Nenhuma categoria ainda foi cadastrada</label>
+      </div>
+    </div>
+
+    <div class="row" *ngFor = 'let category of categories'>
+      <div class="col-md-6">
+          {{category.name}}
+      </div>
+      <div class="col-md-6">
+          {{category.clor}}
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12" style="text-align: right;">
+          <button type="button" class="btn btn-success" (click) = "newCategory();"> Novo</button>
+      </div>
+    </div>
+</div>
