@@ -18,14 +18,15 @@
       </div>
     </div>
 
-    <div class="row" *ngFor = 'let category of categories'>
+    <div class="row" *ngFor = 'let key of Object.keys(categories)'>
       <div class="col-md-6">
-          {{category.name}}
+          {{categories[key].name}}
       </div>
       <div class="col-md-6">
-          {{category.clor}}
+        <i class="fa fa-square" aria-hidden="true" [style.color]="categories[key].color"></i>
       </div>
     </div>
+
     <hr>
     <div class="row">
       <div class="col-md-12" style="text-align: right;">

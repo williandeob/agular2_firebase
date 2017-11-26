@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { CategoriaListarComponent }  from './component/calendario/categoria.listar.component';
@@ -14,7 +15,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes) ],
+  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule],
   declarations: [ AppComponent, CategoriaListarComponent, CategoriaCadastrarComponent, EventoListarComponent],
   bootstrap:    [ AppComponent ]
 })

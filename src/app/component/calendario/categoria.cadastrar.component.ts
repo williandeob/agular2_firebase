@@ -8,8 +8,11 @@ import { Category } from '../../model/Category';
 })
 export class CategoriaCadastrarComponent {
 	category: Category;
+	private url: string;
+
 	constructor(private router: Router) {
 		this.category = new Category('','#ffffff');
+		this.url = 'http://int02-e07d3.firebaseio.com/calendar/category.json';
 	}
 
 	public backList(){
