@@ -1,1 +1,55 @@
-Evento listar
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Todas os eventos</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <button class="btn btn-success">Este mês</button>
+      </div>
+      <div class="col-md-3">
+        <input class="form-control" type="date" [value]="dataIni">
+      </div>
+      <div class="col-md-3">
+        <input class="form-control" type="date"  [value]="dataFim">
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-info">Pesquisar</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+          <input class="form-control" placeholder="Buscar">
+      </div>
+    </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-md-12">
+          <h4>De {{dataIni | date:'dd/MM/yyyy'}} a {{dataFim  | date:'dd/MM/yyyy'}}</h4>
+      </div>
+    </div>
+
+    <div class="row" *ngFor = 'let key of Object.keys(events)'>
+      <div class="col-md-12">
+          <label>{{events[key].name}}</label>
+          <br>
+          <label>Dia: {{events[key].date | date: 'dd'}}</label>
+          <p>{{events[key].note}}</p>
+          <p><i class="fa fa-plus" style="cursor:pointer;"> Descrição</i></p>
+      </div>
+      <hr>
+    </div>
+
+    <hr>
+    <div class="row">
+      <div class="col-md-12" style="text-align: right;">
+          <button type="button" class="btn btn-primary"> Novo</button>
+      </div>
+    </div>
+
+
+</div>
