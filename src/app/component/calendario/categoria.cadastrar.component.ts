@@ -23,7 +23,6 @@ export class CategoriaCadastrarComponent {
 	public save(){
 		this.category.name = 'Eventos UFG';
 		this.category.color = '#2900ff';
-		this.http.post(this.url, JSON.stringify(this.category), {'Content-Type':'application/json'})
-		.subscribe();
+		this.http.post(this.url, JSON.stringify(this.category), {}).subscribe();
 	}
 }
