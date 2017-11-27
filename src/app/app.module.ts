@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { CategoriaListarComponent }  from './component/calendario/categoria.listar.component';
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule],
+  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule, FormsModule],
   declarations: [ AppComponent, CategoriaListarComponent, CategoriaCadastrarComponent, EventoListarComponent, EventoCadastrarComponent],
   bootstrap:    [ AppComponent ]
 })

@@ -8,11 +8,11 @@
     <div class="row">
         <div class="col-md-11">
           <label>Nome*</label>
-          <input type="text" class="form-control" [value]="category.name">
+          <input type="text" class="form-control" [(ngModel)]="category.name">
         </div>
         <div class="col-md-1">
           <label>Cor*</label>
-          <input class="form-control" type="color" [value]="category.color">
+          <input class="form-control" type="color" [(ngModel)]="category.color">
         </div>
     </div>
     <hr>
