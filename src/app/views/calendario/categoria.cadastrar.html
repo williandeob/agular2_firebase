@@ -8,18 +8,18 @@
     <div class="row">
         <div class="col-md-11">
           <label>Nome*</label>
-          <input class="form-control">
+          <input type="text" class="form-control" [value]="category.name">
         </div>
         <div class="col-md-1">
           <label>Cor*</label>
-          <input class="form-control" type="color">
+          <input class="form-control" type="color" [value]="category.color">
         </div>
     </div>
     <hr>
     <div class="row">
         <div class="col-md-12" style="text-align: right;">
-            <button type="button" class="btn btn-primary" (click) = "save();"> Salvar</button>
             <button type="button" class="btn btn-warning" (click) = "backList();"> Voltar</button>
+            <button type="button" class="btn btn-primary" (click) = "save();"> Salvar</button>
         </div>
     </div>
 </div>

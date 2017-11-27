@@ -28,8 +28,4 @@ export class CategoriaListarComponent  {
        this.categories = JSON.parse(data['_body']);
 		 })
 	 }
-
-	 public setColor(color:string){
-		 return {'color':color};
-	 }
 }
