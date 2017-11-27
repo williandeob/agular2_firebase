@@ -21,6 +21,10 @@ export class CategoriaCadastrarComponent {
 	}
 
 	public save(){
-		this.http.post(this.url, JSON.stringify(this.category), {}).subscribe();
+		this.http.post(this.url, JSON.stringify(this.category), {}).subscribe(data => {
+			this.category = new Category('','#000000');
+			alert("Categoria cadastrado com sucesso!");
+		});
+
 	}
 }

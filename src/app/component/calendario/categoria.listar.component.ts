@@ -14,8 +14,19 @@ export class CategoriaListarComponent  {
 
 	 constructor(private router: Router, private http: Http) {
 		  this.categories = new Map<string, Category>();
-			this.url = 'http://int02-e07d3.firebaseio.com/calendar/category.json';
+			this.url = 'https://int02-e07d3.firebaseio.com/calendar/category/';
 			this.getCategories();
+	 }
+
+	 public remove(key:string){
+		 this.http.delete(this.url+key+'.json', {}).subscribe(data => {
+ 			alert("Categoria removido com sucesso!");
+			this.getCategories();
+ 		});
+	}
+
+	 public edit(category:Category, key:string){
+
 	 }
 
 	 public newCategory(){
@@ -23,7 +34,7 @@ export class CategoriaListarComponent  {
 	 }
 
 	 public getCategories(){
-		 this.http.get(this.url)
+		 this.http.get(this.url+'.json')
 		 .subscribe(data => {
        this.categories = JSON.parse(data['_body']);
 		 })
